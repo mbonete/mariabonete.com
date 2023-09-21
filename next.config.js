@@ -1,4 +1,20 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
 
-module.exports = nextConfig
+const { PHASE_PRODUCTION_BUILD } = require('next/constants');
+
+module.exports = function generateConfig(phase) {
+  const config = {
+    compiler: {
+      styledComponents: true,
+    }
+  };
+
+  if (phase !== PHASE_PRODUCTION_BUILD) return config;
+
+  return {
+    ...config,
+    distDir: 'dist',
+    output: 'export',
+  };
+
+}
