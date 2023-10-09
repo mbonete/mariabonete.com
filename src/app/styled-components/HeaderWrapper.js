@@ -112,6 +112,7 @@ export const MenuButton = styled.button`
 export const ButtonSection = styled.div`
   display: flex;
   z-index: 3;
+  gap: 32px;
 
   @media ${QUERIES.laptopAndSmaller} {
     flex-direction: column;

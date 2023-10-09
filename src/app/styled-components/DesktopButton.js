@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import { COLORS } from '../constants';
 
 export const DesktopButton = styled.a`
-  margin: 16px;
   text-align: center;
   padding: 16px;
   background-color: ${COLORS.primary};
