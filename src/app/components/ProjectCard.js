@@ -8,15 +8,19 @@ import { GitHub } from 'react-feather';
 
 function ProjectCard ({project}) {
   
-  const { title, href, description, src, alt, video, github } = project;
+  const { title, href, description, src, alt, video, github, icon } = project;
 
   return (
     <Wrapper>
-      <Title >
-        <LinkTitle href={href}>{title}</LinkTitle>
+      <Header >
+        <LinkTitle href={href}>
+          <Title>
+            {icon ? icon : null}{title}
+          </Title>
+        </LinkTitle>
         { github ? <LinkGithub href={github}><GitHub size={20}/></LinkGithub> : null}
-      </Title>
-      <p>{description}</p>
+      </Header>
+      <Description>{description}</Description>
       {
         video ? (
           <Video
@@ -54,18 +58,50 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.h2`
+const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  width: 100%;
+`;
+
+const Title = styled.h2`
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 1.5rem;
+  color: ${COLORS.primary};
+  transition: 300ms;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: 1.35rem;
+  }
+  @media ${QUERIES.phoneAndSmaller} {
+    font-size: 1.15rem;
+    gap: 4px;
+  }
 `;
 
 const LinkTitle = styled(Link)`
   text-decoration: none;
-  font-size: 1.5rem;
-  color: ${COLORS.primary};
+  height: 100%;
+  width: fit-content;
 
-  &:hover {
+  &:hover ${Title} {
     color: ${COLORS.gray};
+    transform: translateY(-5px);
+  }
+
+`;
+
+
+
+const Description = styled.p`
+  font-size: 1.15rem;
+  hyphens: auto;
+  line-height: 1.685;
+
+  @media ${QUERIES.tabletAndSmaller} {
+    font-size: 1rem;
   }
 `;
 
@@ -91,13 +127,23 @@ const Video = styled.iframe`
 const LinkGithub = styled.a`
   color: ${COLORS.gray};
   padding: 8px;
-  border: 1px solid transparent;
-  border-radius: 100px;
-  transition: 400ms;
+  transition: 300ms;
+
+
+  //optical alignment with the title
+  margin-top: -4px;
+
 
   &:hover {
     color: ${COLORS.primary};
-    border: 1px solid ${COLORS.primary};
     transform: rotate(0.25rad);
+  }
+
+  @media${QUERIES.tabletAndSmaller} {
+    margin-left: auto;
+
+
+    //optical alignment with the title
+    margin-top: -1px;
   }
 `;
