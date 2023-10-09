@@ -134,6 +134,11 @@ const Keyword = styled.div`
   height: 150px;
   width: clamp(50px, 15vw, 100px);
   object-fit: cover;
+  transition: 200ms;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const Title = styled.h3`
