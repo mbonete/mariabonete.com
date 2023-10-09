@@ -1,4 +1,5 @@
-import { Menu } from 'react-feather';
+import { VisuallyHidden } from '@reach/visually-hidden';
+import { Menu, GitHub, Linkedin, FileText } from 'react-feather';
 import LinkButton from '../components/LinkButton';
 import HamburguerMenuModal from '../components/HamburguerMenuModal';
 import { 
@@ -38,9 +39,18 @@ function Header({showMobileMenu, setShowMobileMenu}) {
         
         <ButtonSection>
           
-          <LinkButton href='https://github.com/mbonete'>Github</LinkButton>
-          <LinkButton href='https://www.linkedin.com/in/maria-bonete'>LinkedIn</LinkButton>
-          <LinkButton href='files/MariaBoneteCV.pdf' download='MariaBoneteCV.pdf'>CV</LinkButton>
+          <LinkButton href='https://github.com/mbonete'>
+            <VisuallyHidden>Github</VisuallyHidden>
+            <GitHub size={30} />
+          </LinkButton>
+          <LinkButton href='https://www.linkedin.com/in/maria-bonete'>
+            <VisuallyHidden>Linkedin</VisuallyHidden>
+            <Linkedin size={30}/>
+          </LinkButton>
+          <LinkButton href='files/MariaBoneteCV.pdf' download='MariaBoneteCV.pdf'>
+            <VisuallyHidden>CV</VisuallyHidden>
+            <FileText size={30}/>
+          </LinkButton>
         </ButtonSection>
       </MaxWidthWrapper>
       <Wave src='img/group.svg' alt=''  draggable={false} />  

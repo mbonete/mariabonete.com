@@ -3,21 +3,17 @@ import styled from 'styled-components';
 import { COLORS } from '../constants';
 
 export const DesktopButton = styled.a`
-  min-width: 210px;
   margin: 16px;
   text-align: center;
-  padding: 16px 32px;
+  padding: 16px;
   background-color: ${COLORS.primary};
   color: ${COLORS.white};
-  font-size: 1.5rem;
-  border-radius: 50px;
+  border-radius: 100px;
   text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  transition: transform 200ms;
 
   &:hover {
-    text-decoration: revert;
+    transform: scale(1.1);
   }
 `;
 
