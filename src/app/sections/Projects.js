@@ -10,7 +10,7 @@ const projects = [
     title: 'The Coffee Place',
     href: 'https://the-coffee-place.vercel.app/',
     description: 'This project showcases the artistry of a fictional coffee shop with a focus on elegant design. Users can effortlessly explore the coffee shop\'s offerings, place orders, and engage with dynamic content. Web application crafted using JavaScript, Next.js, and styled-components.',
-    src: '/img/coffee-place.png',
+    src: '/img/coffee-place.svg',
     alt: '',
     github: 'https://github.com/mbonete/coffee-place',
     icon: <Coffee size={20} style={{marginBottom: '5px'}}/>
