@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Subtitle from '../components/Subtitle';
 import { QUERIES, COLORS } from '../constants';
 import ProjectCard from '../components/ProjectCard';
+import { Coffee, Gift, Home, Music } from 'react-feather';
 
 const projects = [
   {
@@ -12,7 +13,7 @@ const projects = [
     src: '/img/coffee-place.png',
     alt: '',
     github: 'https://github.com/mbonete/coffee-place',
-
+    icon: <Coffee size={20} style={{marginBottom: '5px'}}/>
   },
   {
     title: 'Mago del Regalo',
@@ -20,6 +21,7 @@ const projects = [
     description: 'Currently building front-end for Mago del Regalo (“the gift wizard”), AI-powered app that eliminates the challenge of finding gift ideas. Developed utilizing Next.js, TypeScript, MaterialUI, React Query, and Styled Components.',
     src: '/img/magodelregalo.svg',
     alt: '',
+    icon: <Gift size={20} style={{marginBottom: '5px'}}/>
   },
   {
     title: 'Guess The BPM',
@@ -28,6 +30,7 @@ const projects = [
     src: '/img/guessthebpm.svg',
     alt: '',
     github: 'https://github.com/mbonete/guess-the-bpm',
+    icon: <Music size={20} style={{marginBottom: '5px'}}/>
   },
   {
     title: 'Homely',
@@ -36,6 +39,7 @@ const projects = [
     video: 'https://www.youtube.com/embed/lGpt8-h8XWY',
     alt: '',
     github: 'https://github.com/mbonete/homely',
+    icon: <Home size={20} style={{marginBottom: '5px'}}/>
   },
 
 ] 
