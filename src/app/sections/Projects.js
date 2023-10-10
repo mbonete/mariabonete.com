@@ -25,7 +25,7 @@ const projects = [
   },
   {
     title: 'Guess The BPM',
-    href: 'https://www.guessthebpm.com',
+    href: 'https://www.guess-the-bpm.com',
     description: 'Independently built a web-based game using React and StyledComponents that enables users to try to guess the beats per minute of a song by tapping their mouse to the beat in rhythm. The page features an integration with the YouTube API to serve videos and has i18n internationalization for both Spanish and English language.',
     src: '/img/guessthebpm.svg',
     alt: '',
