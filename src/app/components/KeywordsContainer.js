@@ -19,6 +19,12 @@ const technologies = [
     logoSrc: 'img/logos/logo-typescript.svg',
   },
   {
+    name: 'Redux',
+    alt: 'Redux Logo',
+    logoSrc: 'img/logos/logo-redux.svg',
+  },
+
+  {
     name: 'Node.js',
     alt: 'Node.js Logo',
     logoSrc: 'img/logos/logo-nodejs.svg',
@@ -42,6 +48,11 @@ const technologies = [
     name: 'Next.js',
     alt: 'Next.js Logo',
     logoSrc: 'img/logos/logo-next.svg',
+  },
+  {
+    name: 'NativeWind',
+    alt: 'NativeWind Logo',
+    logoSrc: 'img/logos/logo-nativewind.svg',
   },
   {
     name: 'Git',
@@ -72,6 +83,11 @@ const technologies = [
     name: 'React Hook Form',
     alt: 'React Hook Form Logo',
     logoSrc: 'img/logos/logo-react-hook-form.png',
+  },
+  {
+    name: 'Tailwind',
+    alt: 'Tailwind Logo',
+    logoSrc: 'img/logos/logo-tailwind.svg',
   },
   {
     name: 'Styled Components',
